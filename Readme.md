@@ -27,7 +27,6 @@ The Emulator has some type hints, so this might be possible.
 The other possible solution would be to auto generate them.
 
 ### Kotlin stdlib support
-At the moment only plain Kotlin + Espruino API is usable.
-The `kotlin.js` is simply too big to fit on the Watch. 
-Maybe with proper [Dead Code Elimination (DCE)](https://kotlinlang.org/docs/reference/javascript-dce.html) and minification this might be possible.
+At the moment plain Kotlin + Espruino API is usable.
+The Kotlin stdlib is partial working thanks to [Dead Code Elimination (DCE)](https://kotlinlang.org/docs/reference/javascript-dce.html).
 
