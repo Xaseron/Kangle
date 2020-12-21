@@ -4,8 +4,7 @@ This is the [Bangle.js First Application](https://www.espruino.com/Bangle.js+Fir
 ## Building 
 `./gradlew assemble`
 
-There is a lot of Javascript code in the build directory but only one file is compatible.
-You can find this file in `build/js/node_modules/Kangle/kotlin/Kangle.js`.
+You can find the compiled code in `build/js/packages/Kangle/kotlin/Kangle.js`.
 
 Or use this gist: https://gist.github.com/Xaseron/5527e10f225823b99bf2a55db435fdb2
 
@@ -26,20 +25,6 @@ Currently, they are all defined manual.
 It would be nice to somehow import than. 
 The Emulator has some type hints, so this might be possible.
 The other possible solution would be to auto generate them.
-
-### Gradle build target
-```kotlin
-kotlin {
-    target {
-        // both targets are needed to produce working code
-        produceExecutable()
-        nodejs { }
-    }
-}
-``` 
-I need both target so that the file `build/js/node_modules/Kangle/kotlin/Kangle.js` is generated.
-I think this is some intermediate file. 
-There might be a better way to enforce the generation of Espruino compatible source code.  
 
 ### Kotlin stdlib support
 At the moment only plain Kotlin + Espruino API is usable.
